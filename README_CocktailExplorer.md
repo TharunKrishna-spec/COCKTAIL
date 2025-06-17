@@ -3,7 +3,51 @@
 Welcome to **Cocktail Explorer**, a fun web app that lets you search and explore a wide variety of cocktails using the [CocktailDB API](https://www.thecocktaildb.com/).
 
 ---
+## 🧠 What is Cocktail Explorer?
 
+**Cocktail Explorer** is a web app that allows users to search and explore cocktails using the [CocktailDB API](https://www.thecocktaildb.com/api.php). Built using Node.js and Express, this project fetches real-time data from a public API and presents it in a clean, dynamic web interface.
+
+Whether you’re a mixology enthusiast or just someone looking for a fun weekend recipe, this app is for you! 🍸
+
+---
+## 🌐 Live Demo
+
+🔗 [Visit Cocktail Explorer on Render](https://cocktail-explorer.onrender.com) <!-- Replace with your actual link after deployment -->
+
+---
+
+## 💻 Tech Stack
+
+| Tech         | Role                          |
+|--------------|-------------------------------|
+| Node.js      | Backend server                |
+| Express.js   | Routing and server framework  |
+| Axios        | API calls to CocktailDB       |
+| EJS          | Template rendering            |
+| HTML/CSS     | UI design                     |
+| JavaScript   | Interactivity (minimal)       |
+
+---
+
+## ✨ Features
+
+- 🔍 **Search Cocktails** by name
+- 🧪 **Filter** by Alcoholic / Non-Alcoholic
+- 📋 **View Details** – Ingredients, Instructions, and Glass Type
+- 📸 **Images** for every cocktail
+- 💥 **Error Handling** for missing results
+- 🎨 Clean and responsive layout using EJS + CSS
+
+---
+
+## 📷 Screenshots
+
+
+| Homepage | Search Result |
+|----------|----------------|
+| ![Home](./screenshots/home.png) | ![Result](./screenshots/result.png) |
+
+---
 ## 🚀 How to Run Locally
 
 ### 1. Clone the Repository
@@ -41,14 +85,7 @@ Here are some example links powered by the CocktailDB API:
 
 ---
 
-## 📷 Screenshots
 
-
-| Homepage | Search Result |
-|----------|----------------|
-| ![Home](./screenshots/home.png) | ![Result](./screenshots/result.png) |
-
----
 
 ## 🚀 Deployment Guide (Render)
 
@@ -68,6 +105,18 @@ Environment:    Node
 5. Click **Create Web Service** — and you're live!
 
 ---
+## 📁 Folder Structure
+
+COCKTAIL/
+├── public/ # Static files (CSS, images)
+├── views/ # EJS templates
+│ ├── index.ejs
+│ └── result.ejs
+├── index.js # Main server file
+├── package.json
+├── .gitignore
+└── README.md
+
 
 ## 🧠 Learnings & Takeaways
 
