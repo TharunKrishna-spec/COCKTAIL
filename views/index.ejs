@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cocktail Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+</head>
+<body>
+  <h1>Cocktail Explorer 🍸</h1>
+
+<section class="search-section">
+  <h2>Smart Search Bar</h2>
+  <form action="/smart-search" method="POST" class="search-form">
+    <input type="text" id="searchInput" name="searchInput" placeholder="Enter cocktail name, ID or ingredient">
+
+    <select name="searchType" id="searchType" required>
+      <option value="name">Search by Name</option>
+      <option value="id">Search by ID</option>
+      <option value="ingredient">Search by Ingredient</option>
+      <option value="random">Random Cocktail</option>
+    </select>
+
+    <button type="submit">Search</button>
+  </form>
+</section>
+
+
+  <!-- Display Results -->
+  <div class="results">
+    <% if (cocktails.length > 0) { %>
+      <% cocktails.forEach(({ drink, ingredients }) => { %>
+        <div class="result-card">
+          <h3><%= drink.strDrink %> <span>(<%= drink.strAlcoholic %>)</span></h3>
+          <img src="<%= drink.strDrinkThumb %>" alt="<%= drink.strDrink %>" width="200">
+          <p style="margin-bottom: 20px;"><strong>Category:</strong> <%= drink.strCategory %></p>
+          <p style="margin-bottom: 20px;"><strong>Glass:</strong> <%= drink.strGlass %></p>
+          <p style="margin-bottom: 20px;"><strong >Instructions:</strong> <%= drink.strInstructions %></p>
+          <% if (ingredients.length > 0) { %>
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <% ingredients.forEach(item => { %>
+                <li><%= item %></li>
+              <% }); %>
+            </ul>
+          <% } %>
+        </div>
+      <% }); %>
+    <% } else if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+  </div>
+
+<script>
+  const searchType = document.getElementById('searchType');
+  const searchInput = document.getElementById('searchInput');
+
+  searchType.addEventListener('change', function() {
+    if (this.value === 'random') {
+      searchInput.disabled = true;
+      searchInput.placeholder = "No input needed for Random";
+    } else {
+      searchInput.disabled = false;
+      searchInput.placeholder = "Enter cocktail name, ID or ingredient";
+    }
+  });
+</script>
+
+</body>
+
+</html>
