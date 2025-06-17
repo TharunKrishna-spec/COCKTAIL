@@ -12,7 +12,7 @@ Whether you’re a mixology enthusiast or just someone looking for a fun weekend
 ---
 ## 🌐 Live Demo
 
-🔗 [Visit Cocktail Explorer on Render](https://cocktail-explorer.onrender.com) <!-- Replace with your actual link after deployment -->
+🔗 [Visit Cocktail Explorer on Render](https://cocktail-receipe.onrender.com) <!-- Replace with your actual link after deployment -->
 
 ---
 
